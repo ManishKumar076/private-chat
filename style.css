@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
+.app {
+  width: 380px;
+  height: 650px;
+  background: #000;
+  border-radius: 22px;
+  border: 2px solid #4db8ff; /* ONLY BLUE */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.top-bar {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #111;
+}
+
+.title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 12px;
+}
+
+/* IDs Input Section */
+.ids {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px; /* ✅ equal left & right gap */
+}
+
+.ids input {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  background: #000;
+  color: white;
+  outline: none;
+}
+
+/* Chat Area */
+.chat {
+  flex: 1;
+  padding: 15px;
+  background: #000;
+  overflow-y: auto;
+}
+
+/* Message Bubble */
+.msg {
+  position: relative;
+  max-width: 75%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/* Sender */
+.sent {
+  background: #1a1a1a;
+  color: #fff;
+  margin-left: auto;
+  border-bottom-right-radius: 6px;
+}
+
+/* Receiver */
+.received {
+  background: #0d0d0d;
+  color: #ddd;
+  margin-right: auto;
+  border-bottom-left-radius: 6px;
+}
+
+/* Delete Button (sender only) */
+.delete-msg {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  background: #000;
+  border: 1px solid #444;
+  color: #aaa;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 8px;
+  display: none;
+}
+
+.sent:hover .delete-msg {
+  display: block;
+}
+
+/* File Message */
+.file-card {
+  background: #0a0a0a;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.file-card a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.preview {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+/* Send Section */
+.send {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+  border-top: 1px solid #111;
+}
+
+.send input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #222;
+  background: #000;
+  color: white;
+  outline: none;
+}
+
+.file-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #1a1a1a;
+  color: #4db8ff;
+  font-size: 20px;
+  cursor: pointer;
+  transform: rotate(-45deg);
+}
