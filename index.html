@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Private Chat</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -10,30 +11,36 @@
 <div class="app">
   <div class="top-bar">
     <div class="title">Private Chat</div>
-    <div class="subtitle">1-to-1 Chat</div>
+    <div class="subtitle">1-to-1 Firebase Chat</div>
   </div>
 
+  <!-- Your ID -->
+  <div class="my-id">
+    Your ID: <span id="myIdDisplay">loading...</span>
+  </div>
+
+  <!-- Friend ID -->
   <div class="ids">
-    <input id="myId" placeholder="Your ID">
-    <input id="otherId" placeholder="Receiver ID">
+    <input id="otherId" placeholder="Friend ID">
   </div>
 
+  <!-- Chat -->
   <div id="chatBox" class="chat"></div>
 
+  <!-- Send -->
   <div class="send">
-    <label class="file-btn">
-      📎
-      <input type="file" id="fileInput" hidden>
-    </label>
-
     <input id="message" placeholder="Type a message...">
-
-    <button onclick="sendMessage()" class="send-btn">➤</button>
+    <button onclick="sendMessage()">➤</button>
   </div>
 </div>
 
+<!-- Firebase SDKs (COMPAT) -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<!-- App -->
 <script src="script.js"></script>
 </body>
 </html>
-
 
